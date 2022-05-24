@@ -14,5 +14,11 @@ public class main {
         
         Album album1 = new Album("Jeewithe","Manasinghe");
         
+        album1.addToAlbum("Mage Jeewithe", 4.5);
+        album1.addToAlbum("Hadakari", 3.5);
+        album1.addToAlbum("Amma mage", 5.0);
+        
+        
+        
     }
 }
