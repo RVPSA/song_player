@@ -33,7 +33,7 @@ public class album {
         return null;
     }
     
-    public boolean addSong(String title, double duration){
+    public boolean addToAlbum(String title, double duration){
     if(findSong(title) == null){
         songs.add(new Song(title,duration));//point of make a instance of Song class
         System.out.println("Successfully add song to album");
