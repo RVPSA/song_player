@@ -6,6 +6,8 @@
 package song_player;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Scanner;
 /**
  *
  * @author Akesh
@@ -24,11 +26,22 @@ public class main {
         album1.addToPlaylist("Hadakari", playList_1);
         album1.addToPlaylist("Amma mage", playList_1);
         
-        printList(playList_1);
+        play(playList_1);
         
     }
     
-    private static void play(LinkedList<Song> playList){}
+    private static void play(LinkedList<Song> playList){
+        Scanner input = new Scanner(System.in);
+        ListIterator<Song> listIterator = playList.listIterator();
+        
+        if(playList.size() == 0){
+            System.out.println("Play list have no song");
+        }else{
+            System.out.println("Now playing "+ listIterator.next());
+            printMenu();
+        }
+    
+    }
     
     private static void printMenu(){
         System.out.println("Avaliable option\n press relevent number");
