@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package song_player;
-
+import java.util.LinkedList;
 /**
  *
  * @author Akesh
@@ -18,7 +18,10 @@ public class main {
         album1.addToAlbum("Hadakari", 3.5);
         album1.addToAlbum("Amma mage", 5.0);
         
+        LinkedList<Song> playList_1 = new LinkedList<Song>();
         
+        album1.addToPlaylist("Hadakari", playList_1);
+        album1.addToPlaylist("Amma mage", playList_1);
         
     }
 }
