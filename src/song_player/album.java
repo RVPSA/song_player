@@ -25,7 +25,7 @@ public class album {
     public album(){}
     
     private Song findSong(String title){
-        for(Song checkingSong : songs){
+        for(Song checkingSong : songs){//enhanced iterating method
             if(checkingSong.getTitle().equals(title)){
                 return checkingSong;
             }
@@ -35,7 +35,7 @@ public class album {
     
     public boolean addSong(String title, double duration){
     if(findSong(title) == null){
-        songs.add(new Song(title,duration));
+        songs.add(new Song(title,duration));//point of make a instance of Song class
         System.out.println("Successfully add song to album");
         return true;
     }
