@@ -9,16 +9,16 @@ package song_player;
  *
  * @author Akesh
  */
-public class song {
+public class Song {
     String title;
     double duration;
     
-    public song(String title, double duration){
+    public Song(String title, double duration){
         this.title = title;
         this.duration = duration;
     }
     
-    public song(){}
+    public Song(){}
 
     public String getTitle() {
         return title;
