@@ -61,4 +61,16 @@ public class album {
         }
     }
     
+    public boolean addToPlaylist(String title, LinkedList<Song> playList){
+        for(Song checkingSong : this.songs){
+            if(checkingSong.getTitle().equals(title)){
+                playList.add(checkingSong);
+                return true;
+            }
+        }
+        System.out.println("This album does not have a song with title "+ title);
+        return false;
+    }
+    
+    
 }
