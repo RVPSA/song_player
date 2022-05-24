@@ -12,7 +12,7 @@ package song_player;
 public class main {
     public static void main(String args[]){
         
-        
+        Album album1 = new Album("Jeewithe","Manasinghe");
         
     }
 }
