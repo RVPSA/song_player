@@ -6,6 +6,7 @@
 package song_player;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -32,7 +33,7 @@ public class album {
         }
         return null;
     }
-    
+    //add song to the album
     public boolean addToAlbum(String title, double duration){
     if(findSong(title) == null){
         songs.add(new Song(title,duration));//point of make a instance of Song class
@@ -44,4 +45,20 @@ public class album {
         return false;
     }
     }
+    
+    //add a song to playlist where it's in already in the album.
+    //here I use a LinkedList because it has a feaure of storing net item and previous item. 
+    public boolean addToPlaylist(int trackNumber, LinkedList<Song> playlist){
+        int index = trackNumber-1; //usually indices start from the 0
+        if(index >= 0 && index <= this.songs.size()){
+            playlist.add(this.songs.get(index));
+            return true;
+        }
+        else{
+            System.out.println("This album does not have a song with tracknumber"
+                    + trackNumber);
+            return false;
+        }
+    }
+    
 }
