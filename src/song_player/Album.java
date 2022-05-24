@@ -12,18 +12,18 @@ import java.util.LinkedList;
  *
  * @author Akesh
  */
-public class album {
-    private String title;
+public class Album {
+    private String albumName;
     private String artist;
     private ArrayList<Song> songs; //list of an array from the class 'song'
     
-    public album(String title, double duration){
-        this.title =  title;
+    public Album(String albumName, String artist){
+        this.albumName =  albumName;
         this.artist = artist;
         this.songs = new ArrayList<Song>();
     }
     
-    public album(){}
+    public Album(){}
     
     private Song findSong(String title){
         for(Song checkingSong : songs){//enhanced iterating method
