@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package song_player;
+import java.util.Iterator;
 import java.util.LinkedList;
 /**
  *
@@ -23,7 +24,7 @@ public class main {
         album1.addToPlaylist("Hadakari", playList_1);
         album1.addToPlaylist("Amma mage", playList_1);
         
-        play(playList_1);
+        printList(playList_1);
         
     }
     
@@ -38,6 +39,15 @@ public class main {
                 "4 - List all songs\n"+
                 "5 - Print all avaliable options\n"+
                 "6 - Delete song");
+    }
+    
+    private static void printList(LinkedList<Song> playlist){
+        Iterator<Song> iterator = playlist.iterator();
+        System.out.println("-----------------------");
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+        System.out.println("-----------------------");
     }
     
 }
