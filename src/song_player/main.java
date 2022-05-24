@@ -25,6 +25,7 @@ public class main {
         
         album1.addToPlaylist("Hadakari", playList_1);
         album1.addToPlaylist("Amma mage", playList_1);
+        album1.addToPlaylist("Mage Jeewithe", playList_1);
         
         play(playList_1);
         
@@ -33,13 +34,63 @@ public class main {
     private static void play(LinkedList<Song> playList){
         Scanner input = new Scanner(System.in);
         ListIterator<Song> listIterator = playList.listIterator();
+        Boolean exit= false;
         
         if(playList.size() == 0){
             System.out.println("Play list have no song");
         }else{
-            System.out.println("Now playing "+ listIterator.next());
+            System.out.println("Now playing "+ listIterator.next().toString());
             printMenu();
         }
+        
+        while(!exit){
+            int answer = input.nextInt();
+            
+            switch(answer){
+                case 0:
+                    System.out.println("Play list complete");
+                    exit=true;
+                    break;
+                    
+                case 1:
+                    if(listIterator.hasNext()){
+                            System.out.println("Now playing "+ listIterator.next().toString());
+                    }else{
+                        System.out.println("No next");
+                    }
+                    break;
+                case 2:
+                    if(listIterator.hasPrevious()){
+                        System.out.println("Now playing "+listIterator.previous().toString());
+                    }else{
+                        System.out.println("No previous");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Now playing "+listIterator.previous().toString());
+                    break;
+                case 4:
+                    printList(playList);
+                    break;
+                case 5:
+                    printMenu();
+                    break;
+                case 6:
+                    if(playList.size()>0){
+                        listIterator.remove();
+                        if(listIterator.hasNext()){
+                            System.out.println("Now playing"+listIterator.next().toString());
+                        }
+                        else{
+                            if(listIterator.hasPrevious()){
+                                System.out.println("Now playing"+listIterator.previous().toString());
+                            }
+                        }
+                    }
+            }
+                
+        }
+        
     
     }
     
