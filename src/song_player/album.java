@@ -14,12 +14,12 @@ import java.util.LinkedList;
  */
 public class album {
     private String title;
-    private double duration;
+    private String artist;
     private ArrayList<Song> songs; //list of an array from the class 'song'
     
-    public album(String title, double duration, ArrayList<Song> songs){
+    public album(String title, double duration){
         this.title =  title;
-        this.duration = duration;
+        this.artist = artist;
         this.songs = new ArrayList<Song>();
     }
     
