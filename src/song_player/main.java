@@ -23,5 +23,21 @@ public class main {
         album1.addToPlaylist("Hadakari", playList_1);
         album1.addToPlaylist("Amma mage", playList_1);
         
+        play(playList_1);
+        
     }
+    
+    private static void play(LinkedList<Song> playList){}
+    
+    private static void printMenu(){
+        System.out.println("Avaliable option\n press relevent number");
+        System.out.println("0 - Quit\n"+
+                "1 - play next song\n"+
+                "2 - play previous song\n"+
+                "3 - play currentsong again\n"+
+                "4 - List all songs\n"+
+                "5 - Print all avaliable options\n"+
+                "6 - Delete song");
+    }
+    
 }
