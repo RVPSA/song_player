@@ -30,7 +30,7 @@ public class Song {
 
     @Override
     public String toString() {
-        return "Songe: "+ this.title +"Duration: "+this.duration; //To change body of generated methods, choose Tools | Templates.
+        return "Song: "+ this.title +" Duration: "+this.duration; //To change body of generated methods, choose Tools | Templates.
     }
     
     
