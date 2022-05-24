@@ -24,7 +24,14 @@ public class album {
     
     public album(){}
     
-    private Song findSong(String title){}
+    private Song findSong(String title){
+        for(Song checkingSong : songs){
+            if(checkingSong.getTitle().equals(title)){
+                return checkingSong;
+            }
+        }
+        return null;
+    }
     
     public boolean addSong(String title, double duration){
     if(findSong(title) == null){
